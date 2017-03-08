@@ -399,11 +399,15 @@ if (browser.contextualIdentities === undefined) {
 } else {
   browser.contextualIdentities.query({})
     .then((identities) => {
+      var span = document.createElement('span');
+      span.innerText = 'New tab in ';
+      span.className = 'add-identities';
+      topOptionsMenu.insertBefore(span, topOptionsMenu.getElementsByTagName('a')[0]);
       for (let identity of identities) {
         var link = document.createElement('a');
-        link.innerText = `New ${identity.name} tab`;
+        link.innerText = `${identity.name}`;
         link.href = '#';
-        link.className = 'add';
+        link.className = 'add-identities';
         link.dataset.identity = identity.cookieStoreId;
         link.addEventListener('click', addClick);
         topOptionsMenu.insertBefore(link, topOptionsMenu.getElementsByTagName('a')[0]);
