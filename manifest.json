@@ -1,12 +1,13 @@
 {
-  "description": "Sidebar Tabs",
+  "description": "Tabs Helper",
   "homepage_url": "https://github.com/andymckay/sidebar-tabs",
   "manifest_version": 2,
-  "name": "Sidebar Tabs",
+  "name": "Tabs Helper",
   "version": "1.5",
-  "sidebar_action": {
-    "default_title": "Tabs Sidebar",
-    "default_panel": "sidebar.html",
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Tabs Helper",
+    "default_popup": "sidebar.html",
     "default_icon": "sidebar.svg"
   },
   "icons": {
@@ -28,7 +29,7 @@
   },
   "applications": {
       "gecko": {
-          "id": "sidebar-tabs@mckay.pub",
+          "id": "tabs-helper@webext.addons",
           "strict_min_version": "54.0a1"
       }
   }
